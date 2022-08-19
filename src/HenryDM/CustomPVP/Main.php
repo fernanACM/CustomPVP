@@ -10,7 +10,6 @@ use pocketmine\utils\TextFormat;
 use pocketmine\utils\Config;
 
 # Plugin Libs
-use HenryDM\CustomPVP\EventListener;
 use HenryDM\CustomPVP\Events\Cooldown;
 use HenryDM\CustomPVP\Events\KnockBack;
 use HenryDM\CustomPVP\Events\HealthRestore;
@@ -23,7 +22,6 @@ class Main extends PluginBase {
 	
 	public function onEnable() : void {
 	# Event loading
-	$this->getServer()->getPluginManager()->registerEvents(new EventListener($this), $this);
 	$this->getServer()->getPluginManager()->registerEvents(new Cooldown($this), $this);
 	$this->getServer()->getPluginManager()->registerEvents(new KnockBack($this), $this);
 	$this->getServer()->getPluginManager()->registerEvents(new HealthRestore($this), $this);
