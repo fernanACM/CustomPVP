@@ -26,6 +26,7 @@ class Main extends PluginBase {
 	$this->getServer()->getPluginManager()->registerEvents(new EventListener($this), $this);
 	$this->getServer()->getPluginManager()->registerEvents(new Cooldown($this), $this);
 	$this->getServer()->getPluginManager()->registerEvents(new KnockBack($this), $this);
+	$this->getServer()->getPluginManager()->registerEvents(new HealthRestore($this), $this);
 	$this->getServer()->getPluginManager()->registerEvents(new Message($this), $this);
 	$this->getServer()->getPluginManager()->registerEvents(new SoupPvP($this), $this);
 	$this->saveResource("config.yml");
